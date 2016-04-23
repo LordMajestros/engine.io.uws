@@ -7,11 +7,7 @@ var express = require('express')
   , app = express()
   , server = require('http').createServer(app)
   , enchilada = require('enchilada')
-<<<<<<< HEAD
   , io = require('../../').attach(server);
-=======
-  , io = require('engine.io').attach(server);
->>>>>>> 76f479b72f547c6182a6f0c0142224fa1b4847fd
 
 app.use(enchilada({
   src: __dirname + '/public',

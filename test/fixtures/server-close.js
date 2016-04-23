@@ -6,9 +6,6 @@ var engine = listen(function (port) {
   socket.on('open', function() {
     engine.httpServer.close();
     engine.close();
-<<<<<<< HEAD
     engine.ws.close();
-=======
->>>>>>> 76f479b72f547c6182a6f0c0142224fa1b4847fd
   });
 });

@@ -31,7 +31,7 @@ function render(){
 }
 
 // socket
-var socket = new eio.Socket();
+var socket = new eio.Socket({transports:['websocket']});
 var last;
 function send(){
   last = new Date;

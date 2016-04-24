@@ -1075,7 +1075,7 @@ describe('server', function () {
     });
 
     it('should arrive from server to client (multiple, ws)', function (done) {
-      var opts = { allowUpgrades: false, transports: ['websocket'] };
+      var opts = { transports: ['websocket'] };
       var engine = listen(opts, function (port) {
         var socket = new eioc.Socket('ws://localhost:%d'.s(port), { transports: ['websocket'] })
           , expected = ['a', 'b', 'c']
@@ -1097,7 +1097,6 @@ describe('server', function () {
             }, 50);
           });
         });
-
         socket.on('open', function () {
           socket.on('message', function (msg) {
             expect(msg).to.be(expected[i++]);
